@@ -17,10 +17,9 @@ else:
     print("Žádná místnost není v této době k dispozici.")
 
 
-
-
 """    
 #Počet volných místností:
+
 print(f"Počet volných místností: {len(mistnosti)}")
 
 
