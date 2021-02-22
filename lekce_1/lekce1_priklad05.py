@@ -64,6 +64,7 @@ else:
 
 
 
+
 """
 # Knihy se prodávala bud v roce 2019 nebo 2020 - Zkus udělat podmínku pro rok 2019 a pak následně zvlášť pro 2020, dohromady mi to nejde
 operator = prodeje2019 or prodeje2020
