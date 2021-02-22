@@ -14,6 +14,7 @@ prodeje2020 = {
     "Zkus mě chytit": 6671,
 }
 
+
 nazevKnihy= str(input("Zadej název knihy: "))
 
 if nazevKnihy in prodeje2019 and prodeje2020:
