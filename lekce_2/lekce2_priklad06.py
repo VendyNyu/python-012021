@@ -504,16 +504,23 @@ Vytvoř program, který se uživatele zeptá na region, který ho zajímá. Nás
 
 
 
+
 uzivatel = input("Zadej region: ")
 
-found = True
-if found:
-    print("Neznámý region")
+found = False
 for i in staty:
-    found = False
     region = i['region']
-    if uzivatel in region:
+    if uzivatel == region:
         print(i['name'])
+        found = True
+if not found:
+    print("Neznámý region")
+
+
+
+
+
+
 
 
 
