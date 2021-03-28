@@ -29,6 +29,7 @@ print(zamestnanci)
 
 zamestnanci_s_platy = pandas.merge(zamestnanci,platy2021, on=['cislo_zamestnance'])
 print(zamestnanci_s_platy)
+zamestnanci_s_platy.to_csv('zamestnanci_s_platy',index=False)
 
 #Porovnej rozměry tabulek před spojením a po spojení. Pokud nemá některý zaměstnanec plat za únor, znamená to, že v naší firmě již nepracuje.
 
