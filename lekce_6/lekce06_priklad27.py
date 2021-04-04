@@ -8,7 +8,7 @@ import pandas
 projekty = pandas.read_csv('vykazy.csv')
 
 #Proveď agregaci a zjisti celkový počet vykázaných hodin za jednotlivé projekty.
-serazeni_projekty = projekty.groupby('project')['hours'].count()
+serazeni_projekty = projekty.groupby('project')['hours'].sum()
 print(serazeni_projekty)
 
 
