@@ -11,7 +11,6 @@ print(platy.head())
 #Stanovení hranice v hystogramu v bins
 graf = platy.hist(bins=[30000, 35000, 40000, 45000, 50000, 55000, 60000], color = "pink", grid=True, legend=True)
 
-
 #Zobrazení histogramu
 plt.show()
 
