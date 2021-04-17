@@ -1,3 +1,7 @@
+# Vrácení auta
+
+#Půjčení auta
+
 class Auto:
     def pujc_auto(self):
         if self.vypujcenost:
@@ -10,8 +14,8 @@ class Auto:
         return f"Informace k autu: Značka a typ vozidla - {self.znacka_typvozidla}, registrační značka -  {self.registracni_znacka}."
 
     def vrat_auto(self, tachometr, dny):
-        self.tachometr = self.tachometr + tachometr
-        self.dny = dny
+        self.tachometr = self.kilometry + uzivatelKilometry
+        self.dny = uzivatelPocetDnu
         if self.dny == 0:
             price = 0
             cenaCelkem = self.dny * price
@@ -28,10 +32,10 @@ class Auto:
             self.vypujcenost = True
             return (f"Stav tachometru po vrácení je {self.tachometr} km. Cena za půjčení je {cenaCelkem} Kč.")
 
-    def __init__(self, registracni_znacka,znacka_typvozidla, tachometr):
+    def __init__(self, registracni_znacka,znacka_typvozidla, kilometry):
         self.registracni_znacka = registracni_znacka
         self.znacka_typvozidla = znacka_typvozidla
-        self.tachometr = int(tachometr)
+        self.kilometry = int(kilometry)
         self.vypujcenost = True
 
 
@@ -67,9 +71,9 @@ else:
 uzivatelPocetDnu = int(input("Zadej, jak dlouho měl zákazník auto k dispozici: "))
 uzivatelKilometry = int(input("Zadej počet ujetých kilometrů vozidla: "))
 if uzivatel == "Peugeot":
-    print(Auto1.vrat_auto(uzivatelKilometry,uzivatelPocetDnu))
+    print(Auto1.vrat_auto())
 elif uzivatel == "Škoda":
-    print(Auto2.vrat_auto(uzivatelKilometry,uzivatelPocetDnu))
+    print(Auto2.vrat_auto())
 else:
     print("Chyba. Špatně zadané paramtery.")
 
